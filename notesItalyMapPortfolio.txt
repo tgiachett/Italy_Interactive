@@ -1,0 +1,57 @@
+Design
+    Aesthetic
+        -1960's Italian road stop
+            -washed out colors
+            -pastels
+SVG map centric
+    -going along the coast of Italy
+    -hierarchically organized projects ( towns, blocks)
+
+Skills to aquire
+    -cursor coords(?)
+    -Adjust setVeiwBox to simulate zoom (basic) [true]
+        -adjust setViewBox to track onClicks for cities
+    -dynamic load/draw of urban area svg data
+
+
+
+Deliverables
+    -color scheme
+    - coast of italy svg
+        -italian towns on the coast of italy
+        - urban areas svgs
+
+
+
+
+Zoom to Notes
+
+SVG link to Interface SVGLocatable https://www.w3.org/TR/SVG/types.html#__svg__SVGLocatable__getScreenCTM
+
+Links to getBoundingClientRect() https://stackoverflow.com/questions/7032403/get-dimension-of-a-path-in-svg
+
+Link to more getBoundingClientRect() https://www.sitepoint.com/how-to-translate-from-dom-to-svg-coordinates-and-back-again/
+
+Link to getting coords within group https://stackoverflow.com/questions/26049488/how-to-get-absolute-coordinates-of-object-inside-a-g-group
+
+my example 
+
+        var liguria = it.lig.node
+                    var rect = liguria.getBoundingClientRect();
+                    var coorx = liguria.getBoundingClientRect().x;
+                    var coory = liguria.getBoundingClientRect().y;
+                    var w = liguria.getBoundingClientRect().width;
+                    var h = liguria.getBoundingClientRect().height;
+                    console.log(rect)
+                
+                    var matrix = liguria.getScreenCTM()
+                    console.log(matrix)
+                    
+                    R.setViewBox(coorx, coory, w, h, 1);
+
+
+            
+Animating the setViewBox    
+    https://css-tricks.com/interactive-data-visualization-animating-viewbox/
+
+    
