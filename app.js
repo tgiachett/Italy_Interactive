@@ -78,88 +78,88 @@ window.onload = function () {
                         st.toFront();
                         
                     };
-                    st[0].onclick = function () {
-                        console.log(st[0].id)
-                        var bbox = st.getBBox()
-                        console.log(bbox)
-                        console.log(st)
-                        var s = st.getBBox()
-                        console.log(s)
-                        console.log(s.x)
+                    // st[0].onclick = function () {
+                    //     console.log(st[0].id)
+                    //     var bbox = st.getBBox()
+                    //     console.log(bbox)
+                    //     console.log(st)
+                    //     var s = st.getBBox()
+                    //     console.log(s)
+                    //     console.log(s.x)
                         
                         
-                        // <animate attributeName="viewBox" to="0 0 400 400" dur="5s" fill="freeze" />
-                        // var vals = s.x + " " + s.y + " " + s.width + " " + s.height
+                    //     // <animate attributeName="viewBox" to="0 0 400 400" dur="5s" fill="freeze" />
+                    //     // var vals = s.x + " " + s.y + " " + s.width + " " + s.height
                       
-                        // var setAtt = {
-                        //     attributeName: "viewBox",
-                        //     to: vals,
-                        //     dur: "5s",
-                        //     fill: "freeze"
-                        // };
+                    //     // var setAtt = {
+                    //     //     attributeName: "viewBox",
+                    //     //     to: vals,
+                    //     //     dur: "5s",
+                    //     //     fill: "freeze"
+                    //     // };
 
-                        // var anim = document.createElementNS("http://www.w3.org/2000/svg", "animate");
-                        // anim.setAttribute("attributeName", "viewbox")
-                        // anim.setAttribute("to", vals)
-                        // anim.setAttribute("dur", "5s")
-                        // anim.setAttribute("fill", "freeze")
-                        // anim.setAttribute("begin", "indefinate")
-                        // console.log(anim)
-                        // document.getElementById(st[0].id).appendChild(anim)
-                        // function startAnim() {
-                        //     anim.beginElement()
-                        //   }
-                        //   startAnim()
-                        var iW = 1200 - s.width
-                        var iH = 1500 - s.height
-                        var num = 0;
-                        var counter = 0
+                    //     // var anim = document.createElementNS("http://www.w3.org/2000/svg", "animate");
+                    //     // anim.setAttribute("attributeName", "viewbox")
+                    //     // anim.setAttribute("to", vals)
+                    //     // anim.setAttribute("dur", "5s")
+                    //     // anim.setAttribute("fill", "freeze")
+                    //     // anim.setAttribute("begin", "indefinate")
+                    //     // console.log(anim)
+                    //     // document.getElementById(st[0].id).appendChild(anim)
+                    //     // function startAnim() {
+                    //     //     anim.beginElement()
+                    //     //   }
+                    //     //   startAnim()
+                    //     var iW = 1200 - s.width
+                    //     var iH = 1500 - s.height
+                    //     var num = 0;
+                    //     var counter = 0
                         
 
-                        setTimeout(console.log.bind(console, '\n%c' + s[0], s[1]))
-                        console.log(num)
-                        function repeat() {
+                    //     setTimeout(console.log.bind(console, '\n%c' + s[0], s[1]))
+                    //     console.log(num)
+                    //     function repeat() {
                             
-                             //bezier function from Gaëtan Renaudeau https://gist.github.com/gre/1650294   
-                            function acc(t) { return t<.5 ? 2*t*t : -1+(4-2*t)*t }   
-                            num = num + .01
-                            console.log(acc(num))
+                    //          //bezier function from Gaëtan Renaudeau https://gist.github.com/gre/1650294   
+                    //         function acc(t) { return t<.5 ? 2*t*t : -1+(4-2*t)*t }   
+                    //         num = num + .01
+                    //         console.log(acc(num))
                             
 
-                            counter++
+                    //         counter++
 
-                                R.setViewBox((parseInt(s.x) * acc(num)), (parseInt(s.y) * acc(num)), 1200 -  (iW* acc(num)), 1500 - (iH * acc(num)));
+                    //             R.setViewBox((parseInt(s.x) * acc(num)), (parseInt(s.y) * acc(num)), 1200 -  (iW* acc(num)), 1500 - (iH * acc(num)));
                                 
                                 
                             
                                 
                                 
                                 
-                                // console.log(num)
-                                // console.log(counter)
+                    //             // console.log(num)
+                    //             // console.log(counter)
                                 
-                                //R.setViewBox(0, 0, 1200, 1500, 1); analyze what is acutally happening during the animation
+                    //             //R.setViewBox(0, 0, 1200, 1500, 1); analyze what is acutally happening during the animation
                                 
-                                if((parseInt(s.x) * num) >= s.x) {
-                                  clearInterval(myAnim)
-                                }
+                    //             if((parseInt(s.x) * num) >= s.x) {
+                    //               clearInterval(myAnim)
+                    //             }
                             
                         
                         
-                        };
+                    //     };
 
-                        var myAnim = setInterval(repeat, 10)
+                    //     var myAnim = setInterval(repeat, 10)
 
-                        // function viewChange() {
-                        // R.setViewBox(s.x, s.y, s.width, s.height);
+                    //     // function viewChange() {
+                    //     // R.setViewBox(s.x, s.y, s.width, s.height);
 
-                        // }
-                        // requestAnimationFrame(viewChange)
-                        // if(R.viewBox = s.x, s.y, s.width, s.height) {
-                        // st[0].onclick = function () {
-                        //     R.setViewBox(0, 0, 1200, 1500);
-                        // }
-                    };
+                    //     // }
+                    //     // requestAnimationFrame(viewChange)
+                    //     // if(R.viewBox = s.x, s.y, s.width, s.height) {
+                    //     // st[0].onclick = function () {
+                    //     //     R.setViewBox(0, 0, 1200, 1500);
+                    //     // }
+                    // };
                     
 
 
